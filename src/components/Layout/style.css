@@ -1,0 +1,20 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.layout__content {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  min-width: 320px;
+  max-width: 1200px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.layout__inner {
+  position: relative;
+  width: 100%;
+}
