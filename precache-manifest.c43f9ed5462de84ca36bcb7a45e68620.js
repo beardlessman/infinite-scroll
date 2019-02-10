@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "c05f73836b47bb6b8037",
-    "url": "/infinite-scroll/static/css/main.3588e453.chunk.css"
+    "revision": "6015c99f949f9b687c30",
+    "url": "/infinite-scroll/static/css/main.eff2b541.chunk.css"
   },
   {
-    "revision": "c05f73836b47bb6b8037",
-    "url": "/infinite-scroll/static/js/main.c05f7383.chunk.js"
+    "revision": "6015c99f949f9b687c30",
+    "url": "/infinite-scroll/static/js/main.6015c99f.chunk.js"
   },
   {
     "revision": "1015926caf23046f2ba3",
@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/infinite-scroll/static/js/runtime~main.e80e05e6.js"
   },
   {
-    "revision": "5072a228ffec5af05d0438977a0c61f2",
+    "revision": "235f15640e5d69cc1f4cfba9298745e0",
     "url": "/infinite-scroll/index.html"
   }
 ];
