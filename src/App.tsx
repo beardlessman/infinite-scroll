@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import * as React from 'react';
 import Layout from './components/Layout';
 import FeedPage from './pages/FeedPage';
 
-class App extends Component {
+class App extends React.Component {
   render() {
     return (
       <Layout>
