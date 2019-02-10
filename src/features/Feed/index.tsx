@@ -20,10 +20,25 @@ interface IDispatchToProps {
 class Feed extends React.Component<IStateToProps & IDispatchToProps> {
   componentDidMount() {
     this.props.getFeed(1);
+    window.addEventListener('scroll', this.onScroll, false);
   }
-  increaseFeed = () => {
-    this.props.getFeed(getRandomInteger(1, 10));
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.onScroll, false);
+  }
+
+  onScroll = () => {
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 100 && this.props.feed.list.length) {
+      this.increaseFeed();
+    }
   };
+
+  increaseFeed = () => {
+    if (!this.props.feed.isLoading) {
+      this.props.getFeed(getRandomInteger(1, 10));
+    }
+  };
+
   render() {
     const { list } = this.props.feed;
 
@@ -32,11 +47,11 @@ class Feed extends React.Component<IStateToProps & IDispatchToProps> {
         {list.map((item, index) => (
           <Item key={index} data={item} />
         ))}
-        <button onClick={this.increaseFeed}>More</button>
+        {this.props.feed.isLoading && <span>Loading...</span>}
       </div>
     );
   }
-} 
+}
 
 export default connect<IStateToProps, IDispatchToProps>(
   (state: IRootState | any) => ({

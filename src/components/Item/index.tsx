@@ -1,7 +1,7 @@
 import * as React from 'react';
 import IFeedItem from '../../types/IFeedItem';
 
-// import './style.css';
+import './style.css';
 
 interface IProps {
   data: IFeedItem;
