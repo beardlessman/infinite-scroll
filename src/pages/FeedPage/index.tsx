@@ -1,9 +1,10 @@
 import * as React from 'react';
 import Panel from '../../components/Panel';
+import Feed from '../../features/Feed';
 
 import './style.css';
 
-class InfiniteScrollPage extends React.Component {
+class FeedPage extends React.Component {
   render() {
     return (
       <div className="page">
@@ -14,11 +15,13 @@ class InfiniteScrollPage extends React.Component {
           <div className="page__sidebar">
             <Panel>Боковая панель</Panel>
           </div>
-          <div className="page__content">Лента</div>
+          <div className="page__content">
+            <Feed />
+          </div>
         </div>
       </div>
     );
   }
 }
 
-export default InfiniteScrollPage;
+export default FeedPage;

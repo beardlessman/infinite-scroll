@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 import Layout from './components/Layout';
-import InfiniteScrollPage from './features/InfiniteScrollPage';
-
-import './App.css';
+import FeedPage from './pages/FeedPage';
 
 class App extends Component {
   render() {
     return (
       <Layout>
-        <InfiniteScrollPage />
+        <FeedPage />
       </Layout>
     );
   }
