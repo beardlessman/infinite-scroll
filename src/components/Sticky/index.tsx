@@ -36,12 +36,7 @@ class Sticky extends React.PureComponent<IProps, IState> {
   }
 
   updateSticky = () => {
-      console.log('update sticky');
-      
     const bounding = this.relativeChildrenRef.getBoundingClientRect();
-    console.log(bounding.top);
-    console.log(window.innerHeight);
-    // const isActive = window.innerHeight < bounding.top + 58;
     const isActive = bounding.top < 0;
     if (this.state.isActive && !isActive) {
       this.setState({ isActive: false });

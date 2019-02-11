@@ -2,6 +2,7 @@ import * as React from 'react';
 import { connect } from 'react-redux';
 import { AxiosResponse } from 'axios';
 import Item from '../../components/Item';
+import Loader from '../../components/Loader';
 import { IFeedState } from '../../redux/modules/feed/types';
 import { getFeed } from '../../redux/modules/feed/actions';
 import getRandomInteger from '../../helpers/getRandomInteger';
@@ -15,7 +16,7 @@ interface IDispatchToProps {
   getFeed: (id: number) => Promise<AxiosResponse>;
 }
 
-// import './style.css';
+import './style.css';
 
 class Feed extends React.Component<IStateToProps & IDispatchToProps> {
   componentDidMount() {
@@ -47,7 +48,7 @@ class Feed extends React.Component<IStateToProps & IDispatchToProps> {
         {list.map((item, index) => (
           <Item key={index} data={item} />
         ))}
-        {this.props.feed.isLoading && <span>Loading...</span>}
+        {this.props.feed.isLoading && <Loader />}
       </div>
     );
   }
