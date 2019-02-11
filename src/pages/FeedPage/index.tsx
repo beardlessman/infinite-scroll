@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Sticky from '../../components/Sticky';
 import Panel from '../../components/Panel';
 import Feed from '../../features/Feed';
 
@@ -8,13 +9,13 @@ class FeedPage extends React.Component {
   render() {
     return (
       <div className="page">
-        <div className="page__header">
+        <Sticky className="page__header">
           <Panel>Верхняя панель</Panel>
-        </div>
+        </Sticky>
         <div className="page__main">
-          <div className="page__sidebar">
+          <Sticky className="page__sidebar">
             <Panel>Боковая панель</Panel>
-          </div>
+          </Sticky>
           <div className="page__content">
             <Feed />
           </div>
