@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 import { AxiosResponse } from 'axios';
-import Item from '../../components/Item';
+import FeedItem from '../../components/FeedItem';
 import Loader from '../../components/Loader';
 import { IFeedState } from '../../redux/modules/feed/types';
 import { getFeed } from '../../redux/modules/feed/actions';
@@ -46,7 +46,7 @@ class Feed extends React.Component<IStateToProps & IDispatchToProps> {
     return (
       <div className="feed">
         {list.map((item, index) => (
-          <Item key={index} data={item} />
+          <FeedItem key={index} data={item} />
         ))}
         {this.props.feed.isLoading && <Loader />}
       </div>

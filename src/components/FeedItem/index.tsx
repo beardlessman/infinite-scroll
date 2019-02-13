@@ -7,10 +7,10 @@ interface IProps {
   data: IFeedItem;
 }
 
-class Item extends React.Component<IProps> {
+class FeedItem extends React.Component<IProps> {
   render() {
-    return <div className="item">{this.props.data.title}</div>;
+    return <div className="feed-item">{this.props.data.title}</div>;
   }
 }
 
-export default Item;
+export default FeedItem;
