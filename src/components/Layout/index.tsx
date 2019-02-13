@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import Header from '../../components/Header';
+import ScrollTop from '../../components/ScrollTop';
 
 import './style.css';
 
@@ -14,6 +15,7 @@ class Layout extends React.Component {
         <div className="layout__content">
           <div className="layout__inner">{this.props.children}</div>
         </div>
+        <ScrollTop />
       </div>
     );
   }
